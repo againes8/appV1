@@ -5,7 +5,6 @@ ENV INITSYSTEM on
 RUN apt-get -y update && \
 apt-get -y install openssh-server && \
 apt-get install -y network-manager && \
-apt-get install -y apache2
-# apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi
-
-COPY test/ /etc/test/
+apt-get install -y apache2 && \
+apt-get install -y php7.2 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi && \
+sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
