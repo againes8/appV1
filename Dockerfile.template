@@ -7,4 +7,5 @@ apt-get -y install openssh-server && \
 apt-get install -y network-manager && \
 apt-get install -y apache2 && \
 apt-get install -y php5 libapache2-mod-php5 php5-mysql php5-curl php5-json php5-cgi && \
+apt-get install -y cron && \
 sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
